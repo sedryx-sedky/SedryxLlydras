@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="llyox.jpg" alt="Logo" width="500"/>
+  <img src="llyox.JPG" alt="Logo" width="500"/>
 </p>
 
 # Sedryx Llydras

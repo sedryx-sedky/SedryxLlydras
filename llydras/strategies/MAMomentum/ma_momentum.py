@@ -4,7 +4,7 @@ from llydras.interface.graph_portfolio import create_graph, create_graph_with_pr
 import pandas as pd
 
 
-def ma_momentum_strategy(row):
+def ma_momentum_strategy(row, dataset, i):
     # Assumes row includes these columns: 'Close', 'MA_20', 'MA_50', 'Momentum'
     if row['MA_20'] > row['MA_50'] and row['Momentum'] > 0:
         return {'action': 'buy', 'quantity': 1}
@@ -22,6 +22,7 @@ if __name__ == "__main__":
     data['MA_50'] = data['Close'].rolling(window=50).mean()
     data['Momentum'] = data['Close'].diff(5)  # 5-day momentum
 
+    # Get a copy of the stock prices to graph
     price_data = data[['Close']].copy()
     price_data = price_data.reset_index().rename(columns={'index': 'timestamp'})
     price_data['timestamp'] = pd.to_datetime(price_data['timestamp'])

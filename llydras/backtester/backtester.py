@@ -37,7 +37,7 @@ class Portfolio:
 
 
 class Backtester:
-    def __init__(self, data: pd.DataFrame, strategy: Callable[[pd.Series], Dict[str, Any]],
+    def __init__(self, data: pd.DataFrame, strategy: Callable[[pd.Series, pd.DataFrame, int], Dict[str, Any]],
                  initial_cash: float = 10000):
         self.data = data
         self.strategy = strategy
@@ -54,7 +54,7 @@ class Backtester:
 
         for i in range(len(self.data)):
             row = self.data.iloc[i]
-            signal = self.strategy(row)
+            signal = self.strategy(row, self.data, i)
             price = row['Close']
             timestamp = row['Date']  # yfinance uses DatetimeIndex, so the backtester is coupled to that
 

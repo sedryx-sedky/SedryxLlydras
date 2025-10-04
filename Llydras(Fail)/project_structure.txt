@@ -1,0 +1,17 @@
+📁 SedryxLlydras
+├── 📁 llydras
+│   ├── 📁 core
+│   │   ├── 📁 methods
+│   │   │   ├── 📁 optimise
+│   │   │   ├── 📁 rebalance
+│   │   │   ├── 📁 stats
+│   │   │   └── 📄 __init__.py
+│   │   ├── 📄 __init__.py
+│   │   ├── 📄 portfolio.py
+│   │   ├── 📄 stream.py
+│   │   └── 📄 trade.py
+│   ├── 📁 sources
+│   │   ├── 📄 __init__.py
+│   │   └── 📄 yfinanceSource.py
+│   └── 📄 __init__.py
+└── 📄 README.md

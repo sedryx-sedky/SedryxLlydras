@@ -1,7 +1,8 @@
 <p align="center">
-  <img src="logo.JPG" alt="Logo" width="500"/>
+  <img src="Llyox.png" alt="Logo" width="600"/>
 </p>
 
+---
 # Sedryx Llydras
 
 **Sedryx Llydras** is a minimalist, powerful Python library for **backtesting trading strategies**.
